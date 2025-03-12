@@ -11,7 +11,7 @@
         <script>
             let a = [];
             let b = [];
-            let _c = [4, 5, 2, 6, 3, 5, 3, 5, 3, 5, 5, 67, 1, 61, 6, 3, 367, 3, 66, 35];
+            let c = [];
             alert("Nhập mảng a: ");
             for (let i = 0; i < 10; i++) {
                 let num = parseInt(prompt(`Nhập số thứ ${i + 1}`), 10);
@@ -33,7 +33,7 @@
                     i--;
                 }
             }
-            let c = [...a, ...b, ..._c];
+            c = [...a, ...b];
             console.log(`mảng c là : [${c.join(", ")}]`);
 
 
