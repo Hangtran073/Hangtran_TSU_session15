@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bài 2</title>
+    </head>
+
+    <body>
+        <script>
+            let arr = [];
+            console.log("Nhập vào 10 số nguyên khác nhau: ");
+            while(arr.length < 10) {
+                let num = parseInt(prompt(`Nhập số thứ ${arr.length + 1}: `), 10);
+                if(!isNaN(num) && !arr.includes(num)){
+                    arr.push(num);
+
+                }else {
+                    alert ('Số đã tồn tại hoặc không hợp lê! Vui lòng nhập lại.');
+                }
+            }
+
+            let max = arr[0];
+            let index = 0;
+            for (let i = 1; i < arr.length; i++){
+                if (arr[i] > max){
+                    max = arr[i];
+                    index =i;
+                }
+            }
+            console.log(`Mảng vừa nhập : [${arr.join(", ")}]`);
+            console.log(`Phần từ lớn nhất là : ${max} ở vị trí index: ${index}`);
+            alert(`Phần từ lớn nhất là : ${max} ở vị trí index: ${index}`);
+        </script>
+
+    </body>
+
+</html>

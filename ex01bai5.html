@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+<body>
+    <script>
+        let inputStr = "12 -5 -4 20 -6 5 -3";
+        let numbers = inputStr.split(/\s+/); //tách chuỗi thành mảng các phần tử;
+        let count = 0;
+        for ( let i = 0; i < numbers.length; i++){
+            let num = parseInt(numbers[i], 10); //chuyển phần tủ thành số nguyên
+            if (!isNaN(num) && num < 0){
+                count++;
+            }
+        }
+        console.log(`Số lượng nguyên âm trong chuỗi là: ${count}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bài 8</title>
+    </head>
+
+    <body>
+        <script>
+            let a = [];
+            let b = [];
+            let _c = [4, 5, 2, 6, 3, 5, 3, 5, 3, 5, 5, 67, 1, 61, 6, 3, 367, 3, 66, 35];
+            alert("Nhập mảng a: ");
+            for (let i = 0; i < 10; i++) {
+                let num = parseInt(prompt(`Nhập số thứ ${i + 1}`), 10);
+                if (!isNaN(num)) {
+                    a.push(num);
+                } else {
+                    alert("Giá trị không hợp lệ! vui lòng nhập lại!");
+                    i--;
+                }
+            }
+
+            alert("Nhập mảng b: ");
+            for (let i = 0; i < 10; i++) {
+                let num = parseInt(prompt(`Nhập số thứ ${i + 1}`), 10);
+                if (!isNaN(num)) {
+                    b.push(num);
+                } else {
+                    alert("Giá trị không hợp lệ! vui lòng nhập lại!");
+                    i--;
+                }
+            }
+            let c = [...a, ...b, ..._c];
+            console.log(`mảng c là : [${c.join(", ")}]`);
+
+
+
+
+
+        </script>
+
+    </body>
+
+</html>

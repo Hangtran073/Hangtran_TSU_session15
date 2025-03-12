@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bài 6</title>
+    </head>
+
+    <body>
+        <script>
+            let arr = [];
+            for (let i = 0; i < 10; i++) {
+                let num = parseInt(prompt(`Nhập số thứ ${i + 1}`), 10);
+
+                if (!isNaN(num)) {
+                    arr.push(num);
+
+                } else {
+                    alert("Giá trị không hợp lệ! vui lòng nhập lại!");
+                    i--;
+                }
+            }
+            let checkNum = parseInt(prompt("Nhập số cần kiểm tra: "), 10);
+            if (arr.includes(checkNum)) {
+                console.log(`Number ${checkNum} is in the array.`);
+                alert(`Number ${checkNum} is in the array.`);
+
+            } else {
+                console.log(`Number ${checkNum} is not in the array.`);
+                alert(`Number ${checkNum} is not in the array.`);
+
+            }
+        </script>
+
+    </body>
+
+</html>
